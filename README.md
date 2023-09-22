@@ -14,6 +14,8 @@ The only workaround I've found so far is to not reuse `SSLContext` for these con
 from the client-side. Note that for the server-side, `SNIMatcher`s appear to not be reused
 across calls, indicating not only an unintuitive but also an inconsistent behavior.
 
+UPDATE: Now tracked as Java bug [JDK-8316703](https://bugs.java.com/bugdatabase/view_bug?bug_id=JDK-8316703)
+
 ## Why
 
 `SSLContext`s are supposed to be reusable, and great efforts were made to not erroneously reuse
